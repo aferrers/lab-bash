@@ -1,0 +1,54 @@
+Exercises
+
+1. Using the echo command print in console "Hello World". Here is some info about echo command 
+echo Hello WOorld
+
+2. Create a new directory called new_dir.
+mkdir new_dir
+
+3. Delete/Remove the directory new_dir.
+rm -rf new_dir
+
+4.  Copy the file sed.txt from the lorem folder and paste it to the folder lorem-copy folder.
+cp sed.txt ../lorem-copy
+
+5. Copy the other two files from the lorem folder to lorem-copy folder in just one line using semicolon ;.
+cp at.txt ../lorem-copy ; cp lorem.txt ../lorem-copy
+
+6. Show the sed.txt file content from the lorem folder.
+cat /Users/alexferrer/Desktop/bootcamp/Week_1/Day_1/Morning/lab-bash/lorem/sed.txt
+
+7. Show the at.txt file and lorem.txt file contents from lorem folder.
+cat at.txt lorem.txt
+
+8. Print the first 3 rows in sed.txt file from lorem-copy folder.
+head -3 sed.txt
+
+9.Print the last 3 rows in sed.txt file from lorem-copy folder.
+tail -3 sed.txt
+
+10. Add Homo homini lupus. at the end of sed.txt file in the lorem-copy folder.
+echo "Homo homini lupus." >> sed.txt
+
+11. Print the last 3 rows in sed.txt file from lorem-copy folder. You should see Homo homini lupus..
+tail -3 sed.txt
+
+12. Use the sed command to replace all occurances of et with ET in the file at.txt file present in the folder lorem.
+sed -i '' 's/et/ET/g' at.txt 
+
+Comment: this commant would replace "et" even if is not a single word but part of a word. To avoid this I tried using \bet\b but it did not work. The -i also did not work originally so I've added '', that was needed as without it the command would return an error.
+
+13. Find who is the system user.
+whoami
+
+14. Find the current path of the directory you are in.
+pwd
+
+15. List all files with the extension .txt in lorem folder.
+ls *.txt
+
+16. Count the rows in sed.txt file from lorem folder. Look concatenate cat and wc with the pipe |.
+cat sed.txt | wc -l sed.txt
+
+17. Count the files which start with lorem in all directories.
+ls /Users/alexferrer/Desktop/bootcamp/Week_1/Day_1/Morning/lab-bash/**/*.txt
